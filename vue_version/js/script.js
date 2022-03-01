@@ -6,11 +6,17 @@ const root = new Vue({
     el: '#root',
     data: {
         discs: [],
+        search: ''
+    },
+    methods: {
+        searchDisc() {
+            axios.get(`http://localhost/php-ajax-dischi/vue_version/api/db.php?search=${this.search}`).then(res => {
+                this.discs = res.data;
+            }).catch(err => console.error(err))
+        }
     },
     created() {
-        axios.get('http://localhost/php-ajax-dischi/vue_version/api/db.php').then(res => {
-            this.discs = res.data;
-        }).catch(err => console.error(err))
+        this.searchDisc();
     }
 });
 
