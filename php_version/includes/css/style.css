@@ -1,0 +1,22 @@
+:root{
+    --blue-header:#2e3a46;
+    --blue-main:#1e2d3b;
+}
+
+header{
+    background-color: var(--blue-header);
+}
+main{
+    background-color: var(--blue-main);
+}
+.col-2 .card{
+    background-color: var(--blue-header);
+    border: none;
+    color: #fff;
+    height: 318px;
+}
+
+.row .col-2:first-child,
+.row .col-2:nth-child(6n+6){
+    margin-left: calc(100% /12);
+}
