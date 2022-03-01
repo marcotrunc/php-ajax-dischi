@@ -1,0 +1,58 @@
+:root{
+    --blue-header:#2e3a46;
+    --blue-main:#1e2d3b;
+    --greenyellow: greenyellow;
+}
+
+.greyell-col{
+    color: var(--greenyellow);
+}
+
+header{
+    background-color: var(--blue-header);
+}
+main{
+    background-color: var(--blue-main);
+}
+.col-2 .card{
+    background-color: var(--blue-header);
+    border: none;
+    color: #fff;
+    height: 318px;
+}
+
+.row .col-2:first-child,
+.row .col-2:nth-child(6n+6){
+    margin-left: calc(100% /12);
+}
+
+.col-3 input{
+    background-color: var(--blue-header);
+    border: none;
+    border-bottom: 2px solid greenyellow;
+    color: greenyellow;
+}
+
+input:focus-visible {
+    outline-offset: none;
+    outline: none;
+}
+.col-3{
+    position:relative;
+}
+.fa-magnifying-glass{
+    color: greenyellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%,50%);
+    cursor: pointer;
+}
+
+/* Spinner */
+.spinner-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
